@@ -1,0 +1,126 @@
+﻿@using BookStoreXML.Models
+@model BooksReportViewModel
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Bookstore — Books</title>
+    <style>
+        :root {
+            --border: #ddd;
+            --bg: #f3f4f6;
+            --row: #fafafa;
+            --text: #111;
+            --muted: #666;
+        }
+
+        body {
+            font-family: system-ui,"Segoe UI",Arial;
+            margin: 24px;
+            color: var(--text)
+        }
+
+   
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            text-align: center
+        }
+
+            header img {
+                height: 72px; 
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 28px
+            }
+
+        .meta {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 8px 0 16px;
+            text-align: center
+        }
+
+      
+        .container {
+            max-width: 1100px;
+            margin: 0 auto
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 8px;
+            vertical-align: top
+        }
+
+        th {
+            background: var(--bg);
+            text-align: left
+        }
+
+        tr:nth-child(even) {
+            background: var(--row)
+        }
+
+        footer {
+            margin-top: 24px;
+            color: var(--muted);
+            font-size: 12px;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            @if (!string.IsNullOrWhiteSpace(Model.LogoDataUri))
+            {
+                <img src="@Model.LogoDataUri" alt="INSURTIX" />
+            }
+            <h1>Bookstore — Books</h1>
+        </header>
+
+        <div class="meta">
+            Generated: @Model.GeneratedAt.ToString("yyyy-MM-dd HH:mm")
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author(s)</th>
+                    <th>Category</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>ISBN</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var b in Model.Books)
+                {
+                    <tr>
+                        <td>@b.Title</td>
+                        <td>@string.Join(", ", b.Authors)</td>
+                        <td>@b.Category</td>
+                        <td>@b.Year</td>
+                        <td>@b.Price.ToString("0.##")</td>
+                        <td>@b.Isbn</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <footer>© INSURTIX — All rights reserved</footer>
+    </div>
+</body>
+</html>

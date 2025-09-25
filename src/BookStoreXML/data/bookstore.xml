@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bookstore>
+  <book category="children">
+    <isbn>9051234567897</isbn>
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+  <book category="programming" cover="hardcover">
+    <isbn>9780132350884</isbn>
+    <title lang="en">Clean Code</title>
+    <author>Robert C. Martin</author>
+    <year>2008</year>
+    <price>42.50</price>
+  </book>
+  <book category="programming" cover="paperback">
+    <isbn>9780201616224</isbn>
+    <title lang="en">The Pragmatic Programmer</title>
+    <author>Andrew Hunt</author>
+    <author>David Thomas</author>
+    <year>1999</year>
+    <price>45.00</price>
+  </book>
+  <book category="programming" cover="hardcover">
+    <isbn>9780201633610</isbn>
+    <title lang="en">Design Patterns</title>
+    <author>Erich Gamma</author>
+    <author>Richard Helm</author>
+    <author>Ralph Johnson</author>
+    <author>John Vlissides</author>
+    <year>1994</year>
+    <price>54.95</price>
+  </book>
+  <book category="web" cover="paperback">
+    <isbn>9781491904244</isbn>
+    <title lang="en">You Don't Know JS</title>
+    <author>Kyle Simpson</author>
+    <year>2015</year>
+    <price>35.00</price>
+  </book>
+  <book category="web" cover="paperback">
+    <isbn>9781593279509</isbn>
+    <title lang="en">Eloquent JavaScript</title>
+    <author>Marijn Haverbeke</author>
+    <year>2018</year>
+    <price>33.99</price>
+  </book>
+  <book category="web">
+    <isbn>9031234567897</isbn>
+    <title lang="en">XQuery Kick Start (Duplicate)</title>
+    <author>James McGovern</author>
+    <author>Per Bothner</author>
+    <author>Kurt Cagle</author>
+    <author>James Linn</author>
+    <author>Vaidyanathan Nagarajan</author>
+    <year>2003</year>
+    <price>49.99</price>
+  </book>
+  <book category="web" cover="paperback">
+    <isbn>9043127323207</isbn>
+    <title lang="en">Learning XML (Duplicate)</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+</bookstore>
